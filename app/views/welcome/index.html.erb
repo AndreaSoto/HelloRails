@@ -1,0 +1,17 @@
+Hello Yui! rawr
+<ul>
+<% @alldogs.each do |d| %>
+	<li><%= d.name %> : <%= d.age %></li>
+<% end %>
+</ul>
+<hr>
+<h3>Add New Doggie</h3>
+<%= form_for @new_dog, :url => {:controller => 'welcome', :action => 'new_dog'} do |f| -%>
+	<%= f.label :name %>:
+	<%= f.text_field :name %>
+
+	<%= f.label :age %>:
+	<%= f.text_field :age %>
+
+	<%= f.submit %>
+<% end -%>
