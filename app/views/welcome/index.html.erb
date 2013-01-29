@@ -7,11 +7,13 @@ Hello Yui! rawr
 <hr>
 <h3>Add New Doggie</h3>
 <%= form_for @new_dog, :url => {:controller => 'welcome', :action => 'new_dog'} do |f| -%>
-	<%= f.label :name %>:
+	<%= f.label :name %>
 	<%= f.text_field :name %>
 
-	<%= f.label :age %>:
+	<%= f.label :age %>
 	<%= f.text_field :age %>
 
-	<%= f.submit %>
+	<p>
+		<%= f.submit 'Add Doggy', :class => "btn" %>
+	</p>
 <% end -%>
